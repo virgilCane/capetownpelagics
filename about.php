@@ -53,13 +53,13 @@
                     </li>
                     <li><a href="#">About the trips</a>
                     	<ul>
-                    		<li><a href="about.php">What to expect</a></li>
+                    		<li><a href="#">What to expect</a></li>
                     		<li><a href="#">Food and accomodation</a></li>
                     		<li><a href="#">Directions</a></li>
                     		
                         </ul>
                     </li>
-                    <li><a href="#">Gallery</a>
+                    <li><a href="gallery.php">Gallery</a>
                     	
                     </li>
                     <li selected><a href="#">Trip reports</a>
