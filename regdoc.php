@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html class="no-js">
 <head>
@@ -34,13 +35,15 @@
 	<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
 <![endif]-->
 <div class="body">
-        <?php require('./nav.php'); ?>
+ 
+	<?php require('./adnav.php'); ?>
+    
     <!-- Hero Area -->
     <div class="hero-area">
     	<div class="page-banner parallax" style="background-image:url(images/beach-dawn-dusk-ocean-189349.jpg);">
         	<div class="container">
             	<div class="page-banner-text">
-                    <h1 class="block-title">Gallery</h1>
+                    <h1 class="block-title">Admin</h1>
                     <a href='index.php'><img src = 'images/header_logo_left.jpg'></a>
                 </div>
             </div>
@@ -51,75 +54,34 @@
     <div id="main-container">
     	<div class="content">
         	<div class="container">
-                <div class="grid-filter">
-                    <ul class="nav nav-pills sort-source" data-sort-id="gallery" data-option-key="filter">
-                        <li data-option-value="*" class="active"><a href="#"><i class="fa fa-th"></i> <span>Show All</span></a></li>
-                        <li data-option-value=".images"><a href="#"><span><i class="fa fa-image"></i> Images</span></a></li>
-                        <li data-option-value=".videos"><a href="#"><span><i class="fa fa-video-camera"></i> Videos</span></a></li>
-                        <li data-option-value=".links"><a href="#"><span><i class="fa fa-link"></i> Links</span></a></li>
-                        <li data-option-value=".sliders"><a href="#"><span><i class="fa fa-desktop"></i> Sliders</span></a></li>
-                    </ul>
-                </div>
                 <div class="row">
-                    <ul class="sort-destination isotope gallery-items gallery-items-nocaption" data-sort-id="gallery">
-                        <li class="col-md-3 col-sm-6 col-xs-6 grid-item gallery-grid-item images format-image">
-                           	<a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="media-box magnific-image"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""> </a>
-                        </li>
-                        <li class="col-md-3 col-sm-6 col-xs-6 grid-item gallery-grid-item sliders format-gallery">
-                            <div class="media-box">
-                                <div class="flexslider galleryflex" data-autoplay="yes" data-pagination="no" data-arrows="yes" data-style="slide" data-pause="yes">
-                                    <ul class="slides">
-                                        <li class="item"><a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="popup-image"><img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""></a></li>
-                                        <li class="item"><a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="popup-image"><img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-md-3 col-sm-6 col-xs-6 grid-item gallery-grid-item links format-link">
-                           	<a href="http://www.google.com" target="_blank" class="media-box"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""> </a>
-                        </li>
-                        <li class="col-md-3 col-sm-6 col-xs-6 grid-item gallery-grid-item videos format-video">
-                          	<a href="https://vimeo.com/47532705" class="media-box magnific-video"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""> </a>
-                        </li>
-                        <li class="col-md-3 col-sm-6 col-xs-6 grid-item gallery-grid-item images format-image">
-                           	<a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="media-box magnific-image"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""> </a>
-                        </li>
-                        <li class="col-md-3 col-sm-6 col-xs-6 grid-item gallery-grid-item sliders format-gallery">
-                            <div class="media-box">
-                                <div class="flexslider galleryflex" data-autoplay="yes" data-pagination="no" data-arrows="yes" data-style="slide" data-pause="yes">
-                                    <ul class="slides">
-                                        <li class="item"><a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="popup-image"><img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""></a></li>
-                                        <li class="item"><a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="popup-image"><img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-md-3 col-sm-6 col-xs-6 grid-item gallery-grid-item images format-image">
-                           	<a href="http://placehold.it/800x533&amp;text=IMAGE+PLACEHOLDER" class="media-box magnific-image"> <img src="http://placehold.it/800x533&amp;text=IMAGE+PLACEHOLDER" alt=""> </a>
-                        </li>
-                        <li class="col-md-3 col-sm-6 col-xs-6 grid-item gallery-grid-item images format-image">
-                           	<a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="media-box magnific-image"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""> </a>
-                        </li>
-                    </ul>
+                        <div class="col-md-6 col-sm-6 donation-form-infocol">
+                            <form action='auth.php' method='POST'>
+                                <h4>Register</h4>
+                                <input type="text" class="form-control" placeholder="Username" name='username'>
+                                <input type="password" class="form-control" placeholder="Password" name='password'>
+                                <input type='submit' value='register' name='register' class="btn btn-primary">
+                            </form>
+                        </div>
                 </div>
-                <!-- Page Pagination -->
-                <nav>
-                    <ul class="pagination pagination-lg">
-                        <li>
-                            <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li>
-                            <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                <?php 
+                if($_SESSION['registered'] !== NULL){
+                    if($_SESSION['registered'] == FALSE){
+                        echo '<br>';
+                        echo '<div class="row">';
+                            echo '<div class="col-md-6 col-sm-6">';
+                                echo '<div class="alert alert-danger" role="alert">';
+                                    echo $_SESSION['reg-message'];
+                                echo '</div>';
+                            echo '</div>';
+                        echo '</div>';
+                        $_SESSION['registered'] = NULL;
+                    }
+                        
+                    
+                }
+                       
+                ?>
             </div>
         </div>
     </div>
