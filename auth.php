@@ -3,14 +3,14 @@
     require('./header.php');
 
     $account = new Account();
-   $_SERVER['displayError'] = '';
+  
 
     //Add account
     if(!empty($_POST['register'])){
         $userName = $_POST['username'];
         $password = $_POST['password'];
         $_SESSION['registered'] = FALSE;
-        $_SESSION['reg-message'] = '';
+        
         
         try
     {
@@ -28,7 +28,7 @@
 
     $_SESSION['registered'] = TRUE;
     $_SESSION['reg-message'] = 'New Account Registered.';
-    header('Location: login.php',true, 301	);
+    header('Location: logdoc.php',true, 301	);
     
     // echo 'The new account ID is ' . $newId;
     }
@@ -63,7 +63,7 @@ else
 {
     $_SESSION['displayError'] = 'YES';
     $_SESSION['authenticated']= $account->isAuthenticated();
-    header('Location: login.php',true, 301	);
+    header('Location: logdoc.php',true, 301	);
 }
 
     
@@ -80,7 +80,7 @@ try
 	if ($login)
 	{
         
-		header('Location: login.php',true, 301	);
+		header('Location: logdoc.php',true, 301	);
 	}
 	else
 	{

@@ -14,16 +14,12 @@
                 <ul class="sf-menu dd-menu pull-right" role="menu">
                     <li><a href="register.php">Register</a> 
                     </li>
-                    <li><a href="#">Add Pictures</a>
-                    	<ul>
-                    		<li><a href="about.php">What to expect</a></li>
-                    		<li><a href="#">Food and accomodation</a></li>
-                    		<li><a href="#">Directions</a></li>
-                    		
-                        </ul>
+                    <li><a href="adgal.php">Add Pictures</a>
+                    	
                     </li>
                     <li><a href="#">Add Trip Report</a>	
                     </li>
+                    
                     <li><form action='auth.php' method='POST'><button class='btn btn-md  btn-primary btn-rounded' type='submit'name = 'logout'>Logout</button></form> 
                     	
                     </li>                 

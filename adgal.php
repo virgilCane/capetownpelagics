@@ -1,8 +1,8 @@
 <?php require('./header.php'); ?>
 <?php 
     if($_SESSION['authenticated'] == TRUE){
-        require('./regdoc.php');
+        require('./upgal.php');
     }else{
-        header('Location: logdoc.php',true, 301	);
+        header('Location: login.php',true, 301	);
     }
     ?>
