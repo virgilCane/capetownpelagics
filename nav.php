@@ -4,10 +4,10 @@
         <header class="site-header">
             <div class="container">
                 <div class="site-logo">
-                    <a href="index.php" class="default-logo"></a>
-                    <a href="index.php" class="default-retina-logo">Cape Town Pelagics<img src ='images/bird.jpg'></a>
+                    <!-- <a href="index.php" class="default-logo"></a> -->
+                    <a href="index.php" class="default-retina-logo"><h4>Cape Town Pelagics</h4></a>
                     <a href="index.php" class="sticky-logo"><h4><img class='inline-logo' src ='images/bird.jpg' width='40' height='40'> Cape Town Pelagics</h4></a>
-                    <a href="index.php" class="sticky-retina-logo">Cape Town Pelagics</a>
+                    <!-- <a href="index.php" class="sticky-retina-logo">Cape Town Pelagics</a> -->
                 </div>
              	<a href="#" class="visible-sm visible-xs" id="menu-toggle"><i class="fa fa-bars mobi-bars"></i></a>
                
