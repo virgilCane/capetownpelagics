@@ -9,7 +9,7 @@
     if(!empty($_POST['register'])){
         $userName = $_POST['username'];
         $password = $_POST['password'];
-        $_SESSION['registered'] = FALSE;
+        
         
         
         try
