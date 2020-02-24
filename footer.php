@@ -23,6 +23,7 @@
                         <ul>
                                 <li><h5 class='abt'><a class='abt' href='http://www.birdingafrica.com/'>Birding Africa</a></h5></li>
                                 <li><h5 class='abt'><a class='abt' href='http://www.capebirdingroute.org/'>Cape Birding Route</a></h5></li>
+                                <li><h5 class='abt'><a class='abt' href='./logdoc.php'>Admin</a></h5></li>
                         </ul>
                     </div>
                 </div>

@@ -17,6 +17,12 @@ Author:	imithemes
 .abt{
 	color: white !important;
 }
+/* .gal-item{ */
+	/* padding: 1rem; */
+	/* width: 400px;
+	height: 230px; */
+/* } */ 
+
 
 /* EO Custom Styling */
 
@@ -2358,7 +2364,7 @@ body.boxed .body{
 	border:0;
 	text-align:center;
 	position:relative;
-	padding-top:50px;
+	/* padding-top:50px; */
 	padding-bottom:30px;
 	z-index:3;
 	background:#fff;
@@ -3829,6 +3835,9 @@ body.boxed .body{
 	.grid-item .media-box, .grid-item .media-box img{
 		width:100%;
 	}
+	.page-banner.parallax{
+		display: none;
+	}
 	.page-banner{
 		min-height:200px;
 	}
@@ -3990,6 +3999,9 @@ body.boxed .body{
 	/* custom styling */
 	.default-retina-logo{
 		display:block;
+	}
+	h1.mobile-disp{
+		display: none;
 	}
 }
 @media

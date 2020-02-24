@@ -63,7 +63,7 @@ else
 {
     $_SESSION['displayError'] = 'YES';
     $_SESSION['authenticated']= $account->isAuthenticated();
-    header('Location: logdoc.php',true, 301	);
+    header('Location: ./logdoc.php',true, 301	);
 }
 
     

@@ -3,6 +3,6 @@
     if($_SESSION['authenticated'] == TRUE){
         require('./regdoc.php');
     }else{
-        header('Location: logdoc.php',true, 301	);
+        header('Location: ./logdoc.php',true, 301	);
     }
     ?>

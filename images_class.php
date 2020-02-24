@@ -19,14 +19,14 @@ class Image
     } 
 
     // Add a new image data to db and return ID (ID column of pelagicsschema.images)
-    public  function addImage(string $name, string $species, string $rarity, string $description){
+    public  function addImage(string $name, string $species, string $rarity){
     //Global PDO Object
     global $pdo;
     //trim strings to remove extra spaces
     $name = trim($name);
     $species = trim($species);
     $rarity = trim($rarity);
-    $description = trim($description);
+    
 
     /* Check if an image having the same name already exists. If it does, throw an exception */
    if (!is_null($this->getIdFromName($name)))
@@ -37,9 +37,9 @@ class Image
    // Add the new Image
 
    /* Insert query template */
-   $query = 'INSERT INTO pelagicsSchema.images (Name,Species,Rarity,Description) VALUES (:name,:species,:rarity,:description)';
+   $query = 'INSERT INTO pelagicsSchema.images (Name,Species,Rarity) VALUES (:name,:species,:rarity)';
    /* Values array for PDO */
-   $values = array(':name'=>$name, ':species'=>$species, ':rarity'=>$rarity, ':description'=>$description);
+   $values = array(':name'=>$name, ':species'=>$species, ':rarity'=>$rarity,);
    /* Execute the query */
    try
    {
@@ -85,7 +85,7 @@ public function getIdFromName(string $name): ?int
       throw new Exception('Database query error');
    }
    
-   $row = $res->fetch(PDO::FETCH_ASSOC);
+   $row = $res->fetch(PDO::FETCH_ASSOC);    
    
    /* There is a result: get it's ID */
    if (is_array($row))
@@ -95,6 +95,8 @@ public function getIdFromName(string $name): ?int
    
    return $id;
 } 
+
+
 
 
 }

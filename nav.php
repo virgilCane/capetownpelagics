@@ -26,7 +26,7 @@
                     <li><a href="gallery.php">Gallery</a>
                     	
                     </li>
-                    <li selected><a href="trip-reports.php">Trip reports</a>
+                    <li selected><a href="reports.php">Trip reports</a>
                             
                         </li>
                     
@@ -42,3 +42,4 @@
             </div>
         </header>
     </div>
+    

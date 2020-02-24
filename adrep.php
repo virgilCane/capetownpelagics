@@ -1,8 +1,8 @@
 <?php require('./header.php'); ?>
 <?php 
     if($_SESSION['authenticated'] == TRUE){
-        require('./cmsdoc.php');
+        require('./trip-reports.php');
     }else{
-        header('Location: ./login.php',true, 301	);
+        header('Location: ./logdoc.php',true, 301	);
     }
     ?>
