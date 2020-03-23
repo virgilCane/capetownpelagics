@@ -11,19 +11,13 @@ if (!defined("PHP_EOL")) define("PHP_EOL", "\r\n");
 
 //Enquiry form
 $dates = $_POST['tripDate'];
-$numberPax = $_POST['numberPax'];
-$paxNames = $_POST['pNames'];
-$zaCits = $_POST['zaCits'];
+
 //Personal details
 $name = $_POST['name'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
 //for checkbox
-if(isset($_POST['guide'])){
-	$guide = 'Yes';
-}else{
-	$guide = 'No';
-}
+
 
 
 // if(trim($fname) == '') {
@@ -54,23 +48,17 @@ $address = "landsbergcallum@gmail.com";
 // i.e. The standard subject will appear as, "You've been contacted by John Doe."
 
 // Example, $e_subject = '$name . ' has contacted you via Your Website.';
-$e_subject = 'Cape Town Pelagics Contact Form';
+$e_subject = 'Cape Town Pelagics Standby List Form';
 
 
 // Configuration option.
 // You can change this if you feel that you need to.
 // Developers, you may wish to add more fields to the form, in which case you must be sure to add them here.
 
-$e_body = "You have been contacted by $name, their additional message is as follows." . PHP_EOL . PHP_EOL;
+$e_body = "You have been contacted by $name regarding the standby list, their additional message is as follows." . PHP_EOL . PHP_EOL;
 $e_content = "Full Name: ".$name.PHP_EOL;
 $e_content .="Email: ".$email."  Phone: ".$phone.PHP_EOL;
 $e_content .="Preferred trip dates: ".$dates.PHP_EOL;
-$e_content .="Number of Pax: ".$numberPax.PHP_EOL;
-$e_content .="Names of Pax: ".$paxNames.PHP_EOL;
-$e_content .="Number of ZA citizens: ".$zaCits.PHP_EOL;
-$e_content .="Specialised Guide: ".$guide.PHP_EOL;
-             
-
 
 $msg = wordwrap( $e_body . $e_content, 70 );
 
@@ -84,10 +72,10 @@ if(mail($address, $e_subject, $msg, $headers)) {
 
 	// Email has sent successfully, echo a success page.
 
-	$_SESSION['contact-mailer'] = 'Thank you. Your message has been sent and we will be in touch shortly.';
+	$_SESSION['standby-mailer'] = 'Thank you. Your message has been sent and we will be in touch shortly.';
 
 } else {
 
-	$_SESSION['contact-mailer'] ='An error occured when sending your mail, please try again or contact the site administrator.';
+	$_SESSION['standby-mailer'] ='An error occured when sending your mail, please try again or contact the site administrator.';
 
 }

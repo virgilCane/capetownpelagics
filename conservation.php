@@ -1,4 +1,3 @@
-<?php require('./header.php'); ?>
 <!DOCTYPE HTML>
 <html class="no-js">
 <head>
@@ -45,7 +44,7 @@
               <div class="flex-caption-cell hero-header">
                 <div class="flex-caption-text">
                   <div class="page-banner-text">
-                    <h1 class="block-title">Trip Reports</h1>
+                    <h1 class="block-title">Conservation</h1>
                     <br>
                     <a href='index.php'class='hero-image'><img src = 'images/header_logo_left.jpg'></a>
                     <div class='hero-spacer'></div>
@@ -68,63 +67,44 @@
             
         </div>
     </div>
-    <!-- Main Content -->
-    <div id="main-container">
-    	<div class="content">
-        	<div class="container">
-              <div class='row'>
-                <!-- left buffer -->
-                <div class='col-md-2'>
-                  <div>
-                    <br>
-                  </div>
-                </div>
-                <div class='col-md-10'>
-                  <div class="row left-buffer">
-                        
-                        
-                        <?php 
-                          $report = new Report();
-                          $data = $report->OrderReports();
-      
-                          $dataSeperatedByYear = [];
-                          foreach($data as $record){
-                            $dataseperatedByYear[$record['year']][] = $record;
-                            
-                          }
-                          
-                        foreach($dataseperatedByYear as $year){
-                          echo '<h4 class="widgettitle">'.$year[0]['year'].'</h1>'; 
-                          echo '<div class="row ">';
-                          echo '<ul class="gallery-items">';
-                          
-                          foreach($year as $entry){
-                            $date = date_format(date_create($entry['date']),'Y-M-d');
-                            $date_exp = explode('-',$date); 
-                            echo '<li class="col-md-3 col-sm-6 grid-item event-grid-item education format-standard">';
-                            echo '<div class="grid-item-inner">
-                                      <div class="grid-item-content" style="border:none;">
-                                          <span class="event-date">
-                                              <span class="date">'.$date_exp[2].'</span>
-                                              <span class="month">'.$date_exp[1].'</span>
-                                              <span class="year">'.$date_exp[0].'</span>
-                                          </span>
-                                          <h5 class="post-title">'.$entry["description"].'</h5>
-                                          <a href="./trip_reports/'.$entry["name"].'" target="_blank">Read Report</a>
-                                      </div>
-                                  </div>';
-                            echo '</li>';
-                            
-                          }echo '</ul>';
-                          echo '</div>';
-                        }
-                        ?>
-                      </div>
-                  </div>
-                </div>
-                
+
+<!-- Main Content -->
+<div class='main-container'>
+    <div class='content'>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-md-3'></div>
+                <div class="col-md-8 content-block">
+                    	<h3 class='widgettitle'>Seabird Conservation in South Africa</h3>
+                    	<div class="post-media">
+                        	<img src='./images/CTP_SabinesGull_DG.jpg' alt="">
+                        </div>
+                        <div class="post-content">
+                        	<p>Cape Town Pelagics is run on a non-profit basis and we've raised over R 115 000 for albatross research and conservation,
+                         including Grey-headed Albatross satellite tracking and Birdlife International's Save the Albatross Campaign,
+                          of which the Albatross Task force is a part.</p>
+                        	<img src="./images/CPT_Leslie.JPG" width='150'height='auto'alt="" class="align-left">
+                        	<p>Read what <a href='http://news.bbc.co.uk/2/hi/science/nature/7905160.stm'>BBC</a> and <a href='https://www.birdlife.org/africa/news/how-artwork-helping-save-albatross-meidad-goren'>Birdlife International</a> report on Prince Charles meeting our guide Meidad Goren about the Albatross Task Force.</p>
+                        	<p>We're glad that through our pelagic trips we've been able to play our small role in helping to save albatrosses, not only by direct donations, 
+                        but also by raising awareness (for example for the <a href='http://leapschool.org.za/'>Leap School</a> Bird Club) and providing an opportunity for people to see albatrosses and becoming inspired for conservation.
+                         We also take out albatross researchers for free on research trips.</p>
+                      	</div>
+               
+                <div class='col-md-1'></div>
             </div>
-    	</div>
+        </div>
     </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
     <!-- Site Footer -->
     <?php require('./footer.php'); ?>

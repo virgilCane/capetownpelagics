@@ -45,7 +45,7 @@
               <div class="flex-caption-cell hero-header">
                 <div class="flex-caption-text">
                   <div class="page-banner-text">
-                    <h1 class="block-title">Trip Reports</h1>
+                    <h1 class="block-title">Trip Calendar</h1>
                     <br>
                     <a href='index.php'class='hero-image'><img src = 'images/header_logo_left.jpg'></a>
                     <div class='hero-spacer'></div>
@@ -68,61 +68,63 @@
             
         </div>
     </div>
+    <div class="alert alert-info">
+      <p>If you would like to enquire about a trip date that is <strong>provisionally full</strong>, please join our <a href="./standby-list.php"><u>waiting list</u></a> to be notified of any availabilities.</p>
+    </div>
     <!-- Main Content -->
     <div id="main-container">
     	<div class="content">
         	<div class="container">
-              <div class='row'>
-                <!-- left buffer -->
-                <div class='col-md-2'>
-                  <div>
-                    <br>
-                  </div>
-                </div>
-                <div class='col-md-10'>
-                  <div class="row left-buffer">
-                        
-                        
-                        <?php 
-                          $report = new Report();
-                          $data = $report->OrderReports();
-      
-                          $dataSeperatedByYear = [];
-                          foreach($data as $record){
-                            $dataseperatedByYear[$record['year']][] = $record;
-                            
-                          }
+                <div class="row">
+                      
+                       
+                  <?php 
+                  echo '<div class="row">';
+                  echo '<div class="col-md-3"></div>';
+                  echo '<div class="col-md-6">';
+                    $calendar = new Calendar();
+                    $data = $calendar->OrderDates();
+
+                    $dataSeperatedByYear = [];
+                    
+                    foreach($data as $record){
+
+                      $Mdate = date_format(date_create($record['date']),'Y-m-d-F');
+                      $Mdate_exp = explode('-',$Mdate); 
+                     
+                      
+                      $dataseperatedByYear[$record['year']][$Mdate_exp[3]][] = $record;  
+                    }
+
+                    
+                   foreach($dataseperatedByYear as $year){
+                    $keys = array_keys($year);
+                    echo '<h4 class="widgettitle">'.$year[$keys[0]][0]['year'].'</h1>'; 
+                    echo '<ul class="gallery-items">';
+                   
+                    foreach($year as $month){
+                      $head_date = date_format(date_create($month[0]['date']),'Y-F-d');
+                      $head_date_exp = explode('-',$head_date); 
+                      echo '<h5>'.$head_date_exp[1].'</h5>' ;
+                      echo '<ul>';
+                      foreach($month as $entry){
+                        $entry_date= date_format(date_create($entry['date']),'Y-F-d');
+                        $entry_date_exp = explode('-',$entry_date); 
+                        echo '<li class=" education format-standard">'.$entry_date_exp[2].' '.$entry_date_exp[1].' ('.$entry['comment'].') - <strong>'.$entry['spaces'].'</strong>
+                              </li>';
+                      }
+                      echo '</ul>';  
+                     }
+                     echo '</ul>';
+                     
+                   }
+                   echo '</div>';
+                   echo '<div class="col-md-3">
                           
-                        foreach($dataseperatedByYear as $year){
-                          echo '<h4 class="widgettitle">'.$year[0]['year'].'</h1>'; 
-                          echo '<div class="row ">';
-                          echo '<ul class="gallery-items">';
-                          
-                          foreach($year as $entry){
-                            $date = date_format(date_create($entry['date']),'Y-M-d');
-                            $date_exp = explode('-',$date); 
-                            echo '<li class="col-md-3 col-sm-6 grid-item event-grid-item education format-standard">';
-                            echo '<div class="grid-item-inner">
-                                      <div class="grid-item-content" style="border:none;">
-                                          <span class="event-date">
-                                              <span class="date">'.$date_exp[2].'</span>
-                                              <span class="month">'.$date_exp[1].'</span>
-                                              <span class="year">'.$date_exp[0].'</span>
-                                          </span>
-                                          <h5 class="post-title">'.$entry["description"].'</h5>
-                                          <a href="./trip_reports/'.$entry["name"].'" target="_blank">Read Report</a>
-                                      </div>
-                                  </div>';
-                            echo '</li>';
-                            
-                          }echo '</ul>';
-                          echo '</div>';
-                        }
-                        ?>
-                      </div>
-                  </div>
+                         </div>';
+                   echo '</div>';
+                  ?>
                 </div>
-                
             </div>
     	</div>
     </div>

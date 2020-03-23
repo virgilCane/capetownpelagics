@@ -34,12 +34,12 @@
     <div class="site-footer-bottom">
     	<div class="container">
         	<div class="row">
-            	<div class="col-md-9 col-sm-9">
+            	<div class="col-md-9 col-sm-6">
                 	<div class="copyrights-col-left">
                     	<p>&copy; 1997 - <?php echo date('Y');?> Cape Town Pelagics. All Rights Reserved</p>
                     </div>
                 </div>
-            	<div class="col-md-3 col-sm-3"></div>
+            	<div class="col-md-3 col-sm-6"></div>
                 	<div class="copyrights-col-right">
                         <p>This site was made with <i class="fa fa-heart"></i> by <a href='https://callumlandsberg.netlify.com/'>Callum Landsberg</a></p>
                     	

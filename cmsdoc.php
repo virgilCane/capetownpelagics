@@ -93,11 +93,11 @@
                                 <li class="item">
                                     <div class="grid-item cause-grid-item small-business format-standard">
                                         <div class="grid-item-inner">
-                                            <a href="#" class="media-box">
+                                            <a href="adcal.php" class="media-box">
                                                 <img src="./images/CTP_FleshfShearwaterBRw800.jpg" alt="">
                                             </a>
                                             <div class="grid-item-content">
-                                                <h3 class="post-title"><a href="#">Update <br>Trip Calendar</a></h3>
+                                                <h3 class="post-title"><a href="adcal.php">Update <br>Trip Calendar</a></h3>
                                             </div>
                                         </div>
                                     </div>

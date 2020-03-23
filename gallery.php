@@ -36,15 +36,36 @@
         <?php require('./nav.php'); ?>
        <!-- Hero Area -->
        <div class="hero-area">
-    	<div class="page-banner parallax" style="background-image:url(images/beach-dawn-dusk-ocean-189349.jpg);">
-        	<div class="container">
-            	<div class="page-banner-text">
-                    <h1 class="block-title mobile-disp">Gallery</h1>
-                    <a href='index.php'><img src = 'images/header_logo_left.jpg'></a>
+        <div class="page-banner parallax" style="background-image:url(images/beach-dawn-dusk-ocean-189349.jpg);">
+          <div class='flex-caption'>
+            <div class="container">
+            <div class="flex-caption-table">
+              <div class="flex-caption-cell hero-header">
+                <div class="flex-caption-text">
+                  <div class="page-banner-text">
+                    <h1 class="block-title">Gallery</h1>
+                    <br>
+                    <a href='index.php'class='hero-image'><img src = 'images/header_logo_left.jpg'></a>
+                    <div class='hero-spacer'></div>
+                    <ul class="social-icons-rounded social-icons-colored">
+                      <li class="facebook"><a href="https://www.facebook.com/CapeTownPelagics/"><i class="fa fa-facebook-f"></i></a></li>
+                      <li class="twitter"><a href="https://twitter.com/capetownpelagic?lang=en"><i class="fa fa-twitter"></i></a></li>                            
+                      <li class="instagram"><a href="https://www.instagram.com/capetownpelagics/"><i class="fa fa-instagram"></i></a></li>
+                    </ul>  
+                  </div>
                 </div>
+                
+              </div>
+              
             </div>
+                
+                  
+            </div>
+          </div>
+        	
+            
         </div>
-    </div>
+       </div>
     <br>
     <!-- Main Content -->
     <div id="main-container">
@@ -60,7 +81,7 @@
                             if($file != '.' && $file != '..' && $file != 'Thumbs.db'){
                                 $spcs = explode('_',$file);
                                 echo '<li class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 cause-grid-item">';
-                                echo "<img src='./gallery/$file' class='gal-item media-box '>";
+                                echo "<a href='./gallery/$file' class='media-box magnific-image'><img src='./gallery/$file' class='gal-item media-box '></a>";
                                 echo '<div class="grid-item-content">
                                         <p>'.$spcs[0].'  ['.$spcs[1].']</p>
                                      </div>';

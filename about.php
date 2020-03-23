@@ -37,13 +37,34 @@
         <?php require('./nav.php'); ?>
     <!-- Hero Area -->
     <div class="hero-area">
-    	<div class="page-banner parallax" style="background-image:url(images/beach-dawn-dusk-ocean-189349.jpg);">
-        	<div class="container">
-            	<div class="page-banner-text">
+      <div class="page-banner parallax" style="background-image:url(images/beach-dawn-dusk-ocean-189349.jpg);">
+          <div class='flex-caption'>
+            <div class="container">
+            <div class="flex-caption-table">
+              <div class="flex-caption-cell hero-header">
+                <div class="flex-caption-text">
+                  <div class="page-banner-text">
                     <h1 class="block-title">About Us</h1>
-                    <a href='index.php'><img src = 'images/header_logo_left.jpg'></a>
+                    <br>
+                    <a href='index.php'class='hero-image'><img src = 'images/header_logo_left.jpg'></a>
+                    <div class='hero-spacer'></div>
+                    <ul class="social-icons-rounded social-icons-colored">
+                      <li class="facebook"><a href="https://www.facebook.com/CapeTownPelagics/"><i class="fa fa-facebook-f"></i></a></li>
+                      <li class="twitter"><a href="https://twitter.com/capetownpelagic?lang=en"><i class="fa fa-twitter"></i></a></li>                            
+                      <li class="instagram"><a href="https://www.instagram.com/capetownpelagics/"><i class="fa fa-instagram"></i></a></li>
+                    </ul>  
+                  </div>
                 </div>
+                
+              </div>
+              
             </div>
+                
+                  
+            </div>
+          </div>
+        	
+            
         </div>
     </div>
     <!-- Main Content -->

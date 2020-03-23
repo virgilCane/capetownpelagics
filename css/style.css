@@ -17,11 +17,16 @@ Author:	imithemes
 .abt{
 	color: white !important;
 }
-/* .gal-item{ */
-	/* padding: 1rem; */
-	/* width: 400px;
-	height: 230px; */
-/* } */ 
+.hero-spacer{
+	padding:10px;
+}
+.gal-item{
+	padding: 1rem; 
+	width: 100rem;
+	height: 130rem;
+} 
+
+
 
 
 /* EO Custom Styling */
@@ -1542,6 +1547,11 @@ body.boxed .body{
 .hero-slider, .hero-slider.flexslider ul.slides li, .flex-caption-cell{
 	height:600px;
 }
+/*custom */
+ .flex-caption-cell.hero-header{
+	height:400px;
+}
+/*EO Custom */
 .header-style2 .hero-slider, .header-style3 .hero-slider, .header-style2 .hero-slider.flexslider ul.slides li, .header-style3 .hero-slider.flexslider ul.slides li, .header-style2 .flex-caption-cell, .header-style3 .flex-caption-cell{
 	height:550px;
 }
@@ -3602,6 +3612,15 @@ body.boxed .body{
 	}
 }
 @media only screen and (max-width: 992px) {
+	/* Custom */
+		/*sizing classes*/
+div.col-md-10 div.row.left-buffer{
+	padding-left: 10vw!important;
+	padding-right: 5vw!important;
+}
+	div.col-md-6 div.gallery-updates{
+		display:none !important;
+	}
 	.pricing-column .features{
 		margin-bottom:0;
 	}
@@ -3783,6 +3802,9 @@ body.boxed .body{
 	.flex-caption{
 		background:white;
 	}
+	div.col-md-6 div.gallery-updates{
+		display:none !important;
+	}
 	.mobi-bars{
 		color: rgb(36, 38, 41);
 	}
@@ -3834,9 +3856,6 @@ body.boxed .body{
 	}
 	.grid-item .media-box, .grid-item .media-box img{
 		width:100%;
-	}
-	.page-banner.parallax{
-		display: none;
 	}
 	.page-banner{
 		min-height:200px;
@@ -3955,8 +3974,19 @@ body.boxed .body{
 		
 	}
 	/*custom*/
-
+	/*sizing classes*/
+div.col-md-10 div.row.left-buffer{
+	padding-left: 10vw!important;
+	padding-right: 5vw!important;
+}
 	
+	.flex-caption-cell.hero-header{
+		height:300px;
+	}
+
+	.site-logo .default-retina-logo{
+		display:none;
+	}
 	.flex-caption .mobile-disp{
 		display: none;
 	}
@@ -3998,11 +4028,13 @@ body.boxed .body{
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	/* custom styling */
 	.default-retina-logo{
-		display:block;
+		display:none;
 	}
-	h1.mobile-disp{
+	
+	
+	/* h1.mobile-disp{
 		display: none;
-	}
+	} */
 }
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -4013,9 +4045,11 @@ only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
 	.default-retina-logo{
 		display:block;
+		
 	}
 	.default-logo, .sticky .default-retina-logo, .sticky .default-logo, .sticky .default-retina-logo, .sticky .sticky-logo{
-		display:none;
+		display:block;
+		
 	}
 	.sticky .sticky-retina-logo{
 		display:block;

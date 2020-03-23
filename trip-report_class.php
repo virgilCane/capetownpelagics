@@ -123,40 +123,40 @@ public function deleteReport(int $id)
     } 
 
      /* Returns the  id having $name as name, or NULL if it's not found */
-    //  public function getNameFromId(int $id): ?string
-    //  {
-    //     /* Global $pdo object */
-    //     global $pdo;
+     public function getNameFromId(int $id): ?string
+     {
+        /* Global $pdo object */
+        global $pdo;
         
         
-    //     /* Initialize the return value. If no name is found, return NULL */
-    //     $name = NULL;
+        /* Initialize the return value. If no name is found, return NULL */
+        $name = NULL;
         
-    //     /* Search the name on the database */
-    //     $query = 'SELECT name FROM pelagicsSchema.reports WHERE (id = :id)';
-    //     $values = array(':id' => $id);
+        /* Search the name on the database */
+        $query = 'SELECT name FROM pelagicsSchema.reports WHERE (id = :id)';
+        $values = array(':id' => $id);
         
-    //     try
-    //     {
-    //         $res = $pdo->prepare($query);
-    //         $res->execute($values);
-    //     }
-    //     catch (PDOException $e)
-    //     {
-    //        /* If there is a PDO exception, throw a standard exception */
-    //        throw new Exception($e);
-    //     }
+        try
+        {
+            $res = $pdo->prepare($query);
+            $res->execute($values);
+        }
+        catch (PDOException $e)
+        {
+           /* If there is a PDO exception, throw a standard exception */
+           throw new Exception($e);
+        }
         
-    //     $row = $res->fetch(PDO::FETCH_ASSOC);
+        $row = $res->fetch(PDO::FETCH_ASSOC);
         
-    //     /* There is a result: get it's name */
-    //     if (is_array($row))
-    //     {
-    //         $name = strval($row['name']);
-    //     }
+        /* There is a result: get it's name */
+        if (is_array($row))
+        {
+            $name = strval($row['name']);
+        }
         
-    //     return $name;
-    //  } 
+        return $name;
+     } 
 
     /* Returns the  id having $date as date, or NULL if it's not found */
     public function getIdFromDate(string $date): ?int

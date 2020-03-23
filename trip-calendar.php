@@ -53,16 +53,17 @@
 <div id="main-container">
     	<div class="content">
         	<div class="container">
-            <h2  class='block-title'>Add/Delete Trip Reports</h2>
+            <h2  class='block-title'>Add/Edit/Delete Trip Calendar Dates</h2>
                 <div class="row">
                     <div class='col-md-8 col-sm-8 '>
                         <div class='col-md-7 donation-form-infocol'>
-                            <form method='POST' action='uploader-reports.php' enctype='multipart/form-data'>
+                            <form method='POST' action='uploader-calendar.php'>
                                 <div class='form-group'>
                                     <label for='action'>Action</label>
                                     <br>
                                     <select name='action' id='action'>
                                         <option value='add'>Add<br>
+                                        <option value='edit'>Edit<br>
                                         <option value='delete'>Delete<br>
                                     </select>
                                 </div>
@@ -71,21 +72,30 @@
                                     <br>
                                     <input type='date' id='date' name='date' required> 
                                 </div>
+                                <div class='form-group' id='new-date-div'>
+                                    <label for='new-date'>New Date</label>
+                                    <br>
+                                    <input type='date' id='new-date' name='new-date'> 
+                                </div>
+                                <div class='form-group' id='space-div'>
+                                    <label for='spaces'>Spaces Left</label>
+                                    <br>
+                                    <input id='spaces' name='spaces' type='text' placeholder='X spaces left/Full'required>
+                                </div>
                                 <div class='form-group' id='uploader'>
-                                    <label for='pdf'>Trip Report</label>
-                                    <input id='pdf' name='pdf' type='file' accept='.pdf' required>
+                                    <label for='entry'>Additional Text</label>
+                                    <br>
+                                    <input id='entry' name='entry' type='text' placeholder='with backup date on X'>
                                 </div>
-                                <div class='form-group' id='highlights'>
-                                <label for='description'>Highlights</label>
-                                <textarea id='description' name='description' rows='4' cols='50' maxlength='100' placeholder='Max: 100 characters' required></textarea>
-                                </div>
-                                <input type='submit'name='trip-report-uploader'>
+                                <input type='submit'name='trip-calendar-uploader'>
                             </form>
-                            <?php
-                            if(isset($_SESSION['null-reportID'])){
-                                echo '<div class="alert alert-danger"><p>'.$_SESSION['null-reportID'].'</p></div>';
-                            }
+                            <?php 
+                             if(isset($_SESSION['calendarUploadError'])){
+
+                             }
                             ?>
+                            
+                            
                         </div>
                     </div>
                 </div>
@@ -95,6 +105,6 @@
 
       <!-- custom js -->
       <script type='text/javascript' src='./js/jquery-2.1.3.min.js'></script>
-      <script type='text/javascript' src='./js/trip-report.js'></script>
+      <script type='text/javascript' src='./js/trip-calendar.js'></script>
       <!-- Site Footer -->
       <?php require('./footer.php'); ?>

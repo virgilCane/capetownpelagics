@@ -1,0 +1,7 @@
+############FOR CAPETOWNPELAGICS.COM#########################
+
+db NAME: pelagicsSchema;
+server: localhost:3306 (default for MySQL, v10.1.41);
+
+db username: pelagicsroot;
+password: hMxa8%34 ;

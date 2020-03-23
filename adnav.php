@@ -19,7 +19,7 @@
                     </li>
                     <li><a href="adrep.php">Add Trip Report</a>	
                     </li>
-                    <li><a href="#">Update Trip Calendar</a>	
+                    <li><a href="adcal.php">Update Trip Calendar</a>	
                     </li>
                     
                     <li><form action='auth.php' method='POST'><button class='btn btn-md  btn-primary btn-rounded' type='submit'name = 'logout'>Logout</button></form> 

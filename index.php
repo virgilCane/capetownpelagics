@@ -37,60 +37,31 @@
     <!-- Hero Area -->
     <div class="hero-area">
     	<!-- Start Hero Slider -->
-      	<div class="flexslider heroflex hero-slider" data-autoplay="yes" data-pagination="no" data-arrows="yes" data-style="fade" data-pause="yes">
-            <ul class="slides">
-                <li class="parallax" style="background-image:url(images/CTP_SabinesGull_DG.jpg)">
+      	<div class="page-banner heroflex parallax" style="background-image:url(images/CTP_SabinesGull_DG.jpg)">
+            
+                
                 	<div class="flex-caption">
                     	<div class="container">
                         	<div class="flex-caption-table">
                             	<div class="flex-caption-cell">
-                                	<div class="flex-caption-text">
+                                	<div class="flex-caption-text page-banner-text">
                                         <h2 class='mobile-disp'>All Proceeds Go to<br>Research & Conservation</h2>
-                                        <img   src='images/header_logo_left.jpg'>
+                                        <img class='hero-image'  src='images/header_logo_left.jpg'>
+                                        <div class='hero-spacer'></div>
                                         <p class='mobile-disp'>Cape Town Pelagics is unique: <br>
                                          we donate all profits to seabird research and conservation,<br>
                                           including Birdife International's Save the Albatross Fund.</p>
-                                        <a href="causes.html" class="btn btn-primary mobile-disp">Learn More</a>
+                                        <a href="conservation.php" class="btn btn-primary mobile-disp">Learn More</a>
                                     </div>
                                	</div>
                           	</div>
                         </div>
                     </div>
-                </li>
-                <!-- <li class="parallax" style="background-image:url(http://placehold.it/1280x800&amp;text=IMAGE+PLACEHOLDER)">
-                	<div class="flex-caption">
-                    	<div class="container">
-                        	<div class="flex-caption-table">
-                            	<div class="flex-caption-cell">
-                                	<div class="flex-caption-text text-align-center">
-                                        <h2>Make a difference for people<br>who needs it the most</h2>
-                                        <a href="causes.html" class="btn btn-primary">Start with a little</a>
-                                    </div>
-                               	</div>
-                          	</div>
-                        </div>
-                    </div>
-                </li>
-                <li class="parallax" style="background-image:url(http://placehold.it/1280x800&amp;text=IMAGE+PLACEHOLDER)">
-                	<div class="flex-caption">
-                    	<div class="container">
-                        	<div class="flex-caption-table">
-                            	<div class="flex-caption-cell text-align-center">
-                        			<div class="flex-caption-cause">
-                            			<h3><a href="#">Save the Glaciers</a></h3>
-                    					<p>Lorem ipsum dolor sit amet, consectet adipiscing elit. Nam malesuada dapi bus diam, ut fringilla purus efficitur  eget.</p>
-                                        	<span class="meta-data">Donated $26400 / <span class="cause-target">$30000</span></span>
-                                    		<a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#DonateModal">Donate Now</a>
-                          			</div>
-                        		</div>
-                    		</div>
-                        </div>
-                    </div>
-                </li> -->
-          	</ul>
-       	</div>
+               
+        </div>  
+    </div>     
         <!-- End Hero Slider -->
-    </div>
+   
     <!-- Main Content -->
     <div id="main-container">
     	<div class="content">
@@ -98,77 +69,80 @@
             	<div class="container">
                 	
                     <div class="carousel-wrapper">
-                        <div class="row">
-                            <ul class="owl-carousel carousel-fw" id="causes-slider" data-columns="4" data-autoplay="" data-pagination="no" data-arrows="yes" data-single-item="no" data-items-desktop="4" data-items-desktop-small="3" data-items-tablet="2" data-items-mobile="1">
-                                <li class="item">
-                                    <div class="grid-item cause-grid-item small-business format-standard">
-                                        <div class="grid-item-inner">
-                                            <a href="#" class="media-box">
-                                                <img src="images/CTP_trawlerbirds_DG.JPG" alt="">
-                                            </a>
-                                            <div class="grid-item-content">
-                                              
-                                                <h3 class="post-title"><a href="#">View Trip Reports</a></h3>
-                                            
+                            <div class="row">
+                                <ul class="owl-carousel carousel-fw" id="causes-slider" data-columns="4" data-autoplay="" data-pagination="no" data-arrows="yes" data-single-item="no" data-items-desktop="4" data-items-desktop-small="3" data-items-tablet="2" data-items-mobile="1">
+                                    <li class="item">
+                                        <div class="grid-item cause-grid-item small-business format-standard">
+                                            <div class="grid-item-inner">
+                                                <a href="./reports.php" class="media-box">
+                                                    <img src="images/CTP_trawlerbirds_DG.JPG" alt="">
+                                                </a>
+                                                <div class="grid-item-content">
+                                                    <h3 class="post-title"><a href="./reports.php">Trip Reports</a></h3>
+                                                </div>
                                             </div>
-                                        	
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <div class="grid-item cause-grid-item small-business format-standard">
-                                        <div class="grid-item-inner">
-                                            <a href="#" class="media-box">
-                                                <img src="images/CTP_Wanderer-immature_RL.JPG" alt="">
-                                            </a>
-                                            <div class="grid-item-content">
-                                         
-                                                <h3 class="post-title"><a href="#">Species List</a></h3>
-                                                
+                                    </li>
+                                    <li class="item">
+                                        <div class="grid-item cause-grid-item small-business format-standard">
+                                            <div class="grid-item-inner">
+                                                <a href="./calendar.php" class="media-box">
+                                                    <img src="images/CTP_Wanderer-immature_RL.JPG"" alt="">
+                                                </a>
+                                                <div class="grid-item-content">
+                                                    <h3 class="post-title"><a href="./calendar.php">Trip Calendar</a></h3>
+                                                </div>
                                             </div>
-                                        	
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <div class="grid-item cause-grid-item small-business format-standard">
-                                        <div class="grid-item-inner">
-                                            <a href="#" class="media-box">
-                                                <img src="images/CTP_SpermWhale6Jan18_CD.jpg" alt="">
-                                            </a>
-                                            <div class="grid-item-content">
-                                                
-                                                <h3 class="post-title"><a href="#">Gallery</a></h3>
-                                                
+                                    </li>
+                                    <li class="item">
+                                        <div class="grid-item cause-grid-item small-business format-standard">
+                                            <div class="grid-item-inner">
+                                                <a href="./gallery.php" class="media-box">
+                                                    <img src="images/CTP_SpermWhale6Jan18_CD.jpg" alt="">
+                                                </a>
+                                                <div class="grid-item-content">
+                                                    <h3 class="post-title"><a href="./gallery.php">Gallery</a></h3>
+                                                </div>
                                             </div>
-                                        	
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <div class="grid-item cause-grid-item small-business format-standard">
-                                        <div class="grid-item-inner">
-                                            <a href="#" class="media-box">
-                                                <img src="images/CTP_Black-browAlb_AdB.JPG" alt="">
-                                            </a>
-                                            <div class="grid-item-content">
-                                                
-                                                <h3 class="post-title"><a href="#">Conservation</a></h3>
-                                                
+                                    </li>
+                                    <li class="item">
+                                        <div class="grid-item cause-grid-item small-business format-standard">
+                                            <div class="grid-item-inner">
+                                                <a href="./conservation.php" class="media-box">
+                                                    <img src="images/CTP_Black-browAlb_AdB.JPG" alt="">
+                                                </a>
+                                                <div class="grid-item-content">
+                                                    <h3 class="post-title"><a href="./conservation.php">Conservation</a></h3>
+                                                </div>
                                             </div>
-                                        	
                                         </div>
-                                    </div>
-                                </li>
-                                
-                                
-                            </ul>
-                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
                     </div>
                	</div>
-            </div>           
+            </div>
+             
+                <div class='container'>
+                    <div class='row'>
+                        <h2 class='widgettitle'>Last Minute Space On Board</h2>
+                        <p>We received a couple of cancelations and now have 3 spaces available on our Monday 9 / Tuesday 10 March trip. <a href='mailto:info@capetownpelagics.com'>Contact Amanda for details.</a></p>
+                        <p>Join our <a href='./standby-list.php'>Standby List</a> and we'll contact you when we have last minute space. (Last minute rates - T&C apply).</p>
+                    </div>
+                </div>
+                <!-- grey background spacer between last minute and recent updates -->
+                <div class='lgray-bg'>
+                  <div class='hero-spacer'></div>
+                  <div class='hero-spacer'></div>
+                  <div class='hero-spacer'></div>
+                  <div class='hero-spacer'></div>
+                  <div class='hero-spacer'></div>
+                  
+                </div>
            
-            
             <div class="padding-tb75 position-relative">
             	<div class="half-bg-right accent-bg"></div>
             	<div class="container">
@@ -219,48 +193,97 @@
                                         </div>
                                     </li>
                                 </ul>
+                                <div class='hero-spacer'></div>
+                                <div class='hero-spacer'></div>
+                                <div class="widget widget_testimonials">
+                                    <h3 class="widgettitle">What Our Clients Have to Say</h3>
+                                    <div class="carousel-wrapper">
+                                        <div class="row">
+                                            <ul class="owl-carousel carousel-fw" id="testimonials-slider" data-columns="1" data-autoplay="5000" data-pagination="no" data-arrows="yes" data-single-item="no" data-items-desktop="1" data-items-desktop-small="1" data-items-tablet="1" data-items-mobile="1">
+                                                <li class="item">
+                                                    <div class="testimonial-block">
+                                                        <blockquote>
+                                                            <p>Excellent birding trip! The trawling grounds were rife with pelagic birds- I even got to see a Royal Albatross!</p>
+                                                        </blockquote>
+                                    
+                                                        <div class="testimonial-info">
+                                                            <div class="testimonial-info-in">
+                                                                <strong>Joesph Soap</strong>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="testimonial-block">
+                                                        <blockquote>
+                                                            <p>I had a marvelous tour with Cape Town Pelagics. The guides really know their stuff and I managed to take some superb pictures of the birds.</p>
+                                                        </blockquote>
+                                                        <div class="testimonial-info">
+                                                            <div class="testimonial-info-in">
+                                                                <strong>Jonathan Doe</strong>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                         </div>
-                        
+                    
+                
+                        <!-- When changing these pictures, please make sure everythibg you upload is the same size -->
                     	<div class="col-md-6">
                             <div class="gallery-updates cols2 clearfix">
                                 <ul>
+                                <li class="format-image grid-item">
+                                        <a href="./gallery/Cormorant_seasonal_166173893.jpg" class="media-box magnific-image"> <img src="./gallery/Cormorant_seasonal_166173893.jpg"width='263' height='175' alt=""> </a>
+                                    </li>
+                                  
                                     <li class="format-image grid-item">
-                                        <a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="media-box magnific-image"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""> </a>
+                                        <a href="./gallery/Cormorant_seasonal_166173893.jpg" class="media-box magnific-image"> <img src="./images/CTP_SabinesGull_DG.jpg" style="width:263px !important; height:175px !important;" alt=""> </a>
                                     </li>
-                                    <li class="format-gallery grid-item">
-                                        <div class="media-box">
-                                            <div class="flexslider galleryflex" data-autoplay="yes" data-pagination="no" data-arrows="yes" data-style="slide" data-pause="yes">
-                                                <ul class="slides">
-                                                    <li class="item"><a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="popup-image"><img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""></a></li>
-                                                    <li class="item"><a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="popup-image"><img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                                    <li class="format-image grid-item">
+                                        <a href="./gallery/Cormorant_seasonal_166173893.jpg" class="media-box magnific-image"> <img src="./gallery/Cormorant_seasonal_166173893.jpg"width='263' height='175' alt=""> </a>
                                     </li>
-                                    <li class="format-link grid-item">
-                                        <a href="http://www.google.com" target="_blank" class="media-box"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""> </a>
+                                    <li class="format-image grid-item">
+                                        <a href="./gallery/Cormorant_seasonal_166173893.jpg" class="media-box magnific-image"> <img src="./gallery/Cormorant_seasonal_166173893.jpg"width='263' height='175' alt=""> </a>
                                     </li>
-                                    <li class="format-video grid-item">
-                                        <a href="https://vimeo.com/47532705" class="media-box magnific-video"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""> </a>
+                                    <li class="format-image grid-item">
+                                        <a href="./gallery/Cormorant_seasonal_166173893.jpg" class="media-box magnific-image"> <img src="./gallery/Cormorant_seasonal_166173893.jpg"width='263' height='175' alt=""> </a>
                                     </li>
-                                    <li class="grid-item format-image">
-                                        <a href="http://placehold.it/800x533&amp;text=IMAGE+PLACEHOLDER" class="media-box magnific-image"> <img src="http://placehold.it/800x533&amp;text=IMAGE+PLACEHOLDER" alt=""> </a>
+                                    <li class="format-image grid-item">
+                                        <a href="./gallery/Cormorant_seasonal_166173893.jpg" class="media-box magnific-image"> <img src="./gallery/Cormorant_seasonal_166173893.jpg"width='263' height='175' alt=""> </a>
                                     </li>
-                                    <li class="grid-item format-image">
-                                        <a href="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" class="media-box magnific-image"> <img src="http://placehold.it/600x400&amp;text=IMAGE+PLACEHOLDER" alt=""> </a>
+                                    <li class="format-image grid-item">
+                                        <a href="./gallery/Cormorant_seasonal_166173893.jpg" class="media-box magnific-image"> <img src="./gallery/Cormorant_seasonal_166173893.jpg"width='263' height='175' alt=""> </a>
                                     </li>
+                                    <li class="format-image grid-item">
+                                        <a href="./gallery/Cormorant_seasonal_166173893.jpg" class="media-box magnific-image"> <img src="./gallery/Cormorant_seasonal_166173893.jpg"width='263' height='175' alt=""> </a>
+                                    </li>
+                                    <!-- <li class="format-image grid-item">
+                                        <a href="./gallery/Cormorant_seasonal_166173893.jpg" class="media-box magnific-image"> <img src="./gallery/Cormorant_seasonal_166173893.jpg"width='263' height='175' alt=""> </a>
+                                    </li>
+                                    <li class="format-image grid-item">
+                                        <a href="./gallery/Cormorant_seasonal_166173893.jpg" class="media-box magnific-image"> <img src="./gallery/Cormorant_seasonal_166173893.jpg"width='263' height='175' alt=""> </a>
+                                    </li> -->
+                                   
                                 </ul>
                                 <div class="gallery-updates-overlay">
                                     <i class="icon-multiple-image"></i> Updates from our gallery
                                 </div>
                             </div>
+                            
                         </div>
-                    </div>
-                </div>
+                	</div>
+                    
             </div>
+
+                
+    </div>      
+</div>
+    </div>
             
-            
-        </div>
-    </div> 
+         
     <!-- Site Footer -->
     <?php require('./footer.php'); ?>

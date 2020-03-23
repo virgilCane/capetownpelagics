@@ -35,13 +35,34 @@
         <?php require('./nav.php'); ?>
     <!-- Hero Area -->
     <div class="hero-area">
-    	<div class="page-banner parallax" style="background-image:url(images/beach-dawn-dusk-ocean-189349.jpg);">
-        	<div class="container">
-            	<div class="page-banner-text">
-                    <h1 class="block-title">Contact us</h1>
-                    <a href='index.php'><img src = 'images/header_logo_left.jpg'></a>
+      <div class="page-banner parallax" style="background-image:url(images/beach-dawn-dusk-ocean-189349.jpg);">
+          <div class='flex-caption'>
+            <div class="container">
+            <div class="flex-caption-table">
+              <div class="flex-caption-cell hero-header">
+                <div class="flex-caption-text">
+                  <div class="page-banner-text">
+                    <h1 class="block-title">Contact Us</h1>
+                    <br>
+                    <a href='index.php'class='hero-image'><img src = 'images/header_logo_left.jpg'></a>
+                    <div class='hero-spacer'></div>
+                    <ul class="social-icons-rounded social-icons-colored">
+                      <li class="facebook"><a href="https://www.facebook.com/CapeTownPelagics/"><i class="fa fa-facebook-f"></i></a></li>
+                      <li class="twitter"><a href="https://twitter.com/capetownpelagic?lang=en"><i class="fa fa-twitter"></i></a></li>                            
+                      <li class="instagram"><a href="https://www.instagram.com/capetownpelagics/"><i class="fa fa-instagram"></i></a></li>
+                    </ul>  
+                  </div>
                 </div>
+                
+              </div>
+              
             </div>
+                
+                  
+            </div>
+          </div>
+        	
+            
         </div>
     </div>
     <!-- Main Content -->
@@ -58,30 +79,32 @@
                         </ol>
                     </div>
             	<div class="row">
+              <!-- <form method="post" id="contactform" name="contactform" class="contact-form clearfix" action="./mail/contact.php"> -->
+              
                 	<div class="col-md-8 content-block">
-                    	<form method="post" id="contactform" name="contactform" class="contact-form clearfix" action="mail/contact.php">
-                        	<div class="row">
+                    	
+                        <div class="row">
+                          
                                 <div class="col-md-5">
                                         <h3 class="widgettitle">Enquiry Form</h3>
                                         <div class="form-group">
                                                 <label for='tripDate'>Preferred Trip Date*</label>
-                                                <input type="text" id="tripDate" name="Trip Date"  class="form-control input-lg"  required>
-                                            </div>
+                                                <input type="text" id="tripDate" name="tripDate"  class="form-control input-lg"  required>
+                                        </div>
                                     <div class="form-group">
                                         <label for='numberPax'>Number of Participants*</label>
                                         <input type="number" id="numberPax" name="numberPax"  class="form-control input-lg" placeholder="" min='1' max='10' required>
                                     </div>
                                     <div class="form-group">
-                                            <label for='Participant Names'>Participant(s) Names</label>
-                                            <input type="text" id="pNames" name="Participant Names"  class="form-control input-lg" placeholder="">
+                                            <label for='pNames'>Participant(s) Names</label>
+                                            <input type="text" id="pNames" name="pNames"  class="form-control input-lg" placeholder="">
                                         </div>
                                     <div class="form-group">
-                                        <label for='ZA Citizens'>How many South African citizens?*</label>
-                                        <input type="number" id="zaCits" name="ZA Citizens"  class="form-control input-lg" placeholder="" required>
-                                    </div>
-                                    
-                                    
+                                        <label for='zaCits'>How many South African citizens?*</label>
+                                        <input type="number" id="zaCits" name="zaCits"  class="form-control input-lg" placeholder="" required>
+                                    </div>  
                                 </div>
+                                
                                 <div class="col-md-7">
                                         <h3 class="widgettitle" >Personal Details</h3>
                                         <div class="form-group">
@@ -100,22 +123,19 @@
                                             </div>                                            
                                         </div>
                                                                        
-                              	</div>
-                           	</div>
-                		
-                        <div class="clearfix"></div>
-                        <div id="message"></div>
-                    </div>
-                    
+                                </div>
+                        </div>
+                  </div>  
+                  
                     <!-- Sidebar -->
-                    <div class="col-md-4 sidebar-block">
+                  <div class="col-md-4 sidebar-block">
                         
                            	<h3 class="widgettitle">Other Services</h3>
                                <div class="form-group">
                                    
                                         <label for='guide'>Specialist brid guide</label> 
                                         <p>While in Cape Town, would you like to go birding with a specialist Birding Africa guide?</p>                               
-                                        <input id='guide' name='guide' type='checkbox' class='sg-input' >
+                                        <input id='guide' name='guide' type='checkbox' class='sg-input' value='yes' >
                                 </div>
                                 <div class='form-group'>
                                     <br class='sub-br'>
@@ -124,15 +144,30 @@
                                     <br class='sub-br'>
                                     <br class='sub-br'>
                                 </div>
+                                
                                 <div class='form-group'>
                                         <input id="submit" name="submit" type="submit" class="btn btn-primary btn-lg pull-down" value="Submit">
-                                </div>                                     
-                        
-                                          
-                                    
-                        </div>
-                        </div>
-                    </form>
+                                </div>  
+                                         
+                  </div>
+                  <form method='POST' action='./mail/contact.php'>
+                  <input id="submit" name="submit" type="submit" class="btn btn-primary btn-lg pull-down" value="Submit">
+                </form> 
+                       
+                    <!-- </form> -->
+                  </div>
+                    <?php 
+                    if(isset($_SESSION['contact-mailer'])){
+                      if($_SESSION['contact-mailer'] == 'Thank you. Your message has been sent and we will be in touch shortly.'){
+                        $alert = ' alert alert-info';
+                      }else{
+                        $alert = 'alert alert-danger';
+                      }
+                      echo '<div class="'.$alert.'">
+                            <p>'.$_SESSION["contact-mailer"].'</p>
+                            </div>';
+                    }
+                    ?>
                     <div class="alert alert-info" role="alert">
                             <p><strong>Payment</strong></p>
                             <br>
@@ -156,11 +191,11 @@
                             <p>The full terms and conditions are available upon booking. As bookings are subject to our terms and conditions, please kindly ensure that you have read them.</p>
                                 
                     </div>
-                    </div>                   
+                                     
                 </div>
             
             </div>
         </div>
-    </div>
+    
     <!-- Site Footer -->
     <?php require('./footer.php'); ?>
